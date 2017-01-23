@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backperguntas">
+
+    <TextView
+        android:text="THE QUESTION"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="56dp"
+        android:id="@+id/perguntaid"
+        android:textSize="20sp" />
+
+    <Button
+        android:text="Opção 1"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="57dp"
+        android:id="@+id/op1id"
+        android:layout_below="@+id/perguntaid"
+        android:layout_centerHorizontal="true"
+        android:layout_width="300sp"
+        android:background="@android:color/background_light" />
+
+    <Button
+        android:text="Opção 2"
+        android:layout_width="300sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:id="@+id/op2id"
+        android:layout_below="@+id/op1id"
+        android:layout_alignLeft="@+id/op1id"
+        android:layout_alignStart="@+id/op1id"
+        android:background="@android:color/background_light" />
+
+    <Button
+        android:text="Opção 3"
+        android:layout_width="300sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/op2id"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        android:id="@+id/op3id"
+        android:background="@android:color/background_light" />
+
+    <Button
+        android:text="Opção 4"
+        android:layout_width="300sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/op3id"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp"
+        android:id="@+id/op4id"
+        android:background="@android:color/background_light" />
+</RelativeLayout>
