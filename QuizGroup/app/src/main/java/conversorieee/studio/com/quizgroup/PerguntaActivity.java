@@ -26,11 +26,19 @@ public class PerguntaActivity extends AppCompatActivity {
     private Button opt4;
 
     DADOSPERG1 objetos1 = new DADOSPERG1();
+    DADOSPERG2 objetos2 = new DADOSPERG2();
+    DADOSPERG3 objetos3 = new DADOSPERG3();
+    DADOSPERG4 objetos4 = new DADOSPERG4();
+    DADOSPERG5 objetos5 = new DADOSPERG5();
 
     private String[] valor = new String[6];
 
     private DatabaseReference databaseReferencia = FirebaseDatabase.getInstance().getReference();
     DatabaseReference question = databaseReferencia.child("Dados").child("Pergunta");
+    DatabaseReference questionTwo = databaseReferencia.child("Dados").child("Pergunta2");
+    DatabaseReference questionThree = databaseReferencia.child("Dados").child("Pergunta3");
+    DatabaseReference questionFour = databaseReferencia.child("Dados").child("Pergunta4");
+    DatabaseReference questionFive = databaseReferencia.child("Dados").child("Pergunta5");
 
 
 
@@ -55,13 +63,6 @@ public class PerguntaActivity extends AppCompatActivity {
                 valor[4] = dataSnapshot.child("005").getValue(String.class);
                 valor[5] = dataSnapshot.child("006").getValue(String.class);
 
-                Log.i("FIREBASE", valor[0]);
-                Log.i("FIREBASETWO", valor[1]);
-                Log.i("FIREBASETHREE", valor[2]);
-                Log.i("FIREBASEFOUR", valor[3]);
-                Log.i("FIREBASEFIVE", valor[4]);
-                Log.i("FIREBASESIX", valor[5]);
-
                 objetos1.setPergunta(valor[0]);
                 objetos1.setOption1(valor[1]);
                 objetos1.setOption2(valor[2]);
@@ -69,12 +70,114 @@ public class PerguntaActivity extends AppCompatActivity {
                 objetos1.setOption4(valor[4]);
                 objetos1.setRespostaCerta(valor[5]);
 
+            }
 
-                pergunta.setText(objetos1.getPergunta());
-                opt1.setText(objetos1.getOption1());
-                opt2.setText(objetos1.getOption2());
-                opt3.setText(objetos1.getOption3());
-                opt4.setText(objetos1.getOption4());
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+                Log.w("ERRO", "Failed to read value.", databaseError.toException());
+            }
+        });
+
+        questionTwo.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                valor[0] = dataSnapshot.child("001").getValue(String.class);
+                valor[1] = dataSnapshot.child("002").getValue(String.class);
+                valor[2] = dataSnapshot.child("003").getValue(String.class);
+                valor[3] = dataSnapshot.child("004").getValue(String.class);
+                valor[4] = dataSnapshot.child("005").getValue(String.class);
+                valor[5] = dataSnapshot.child("006").getValue(String.class);
+
+                objetos2.setPergunta(valor[0]);
+                objetos2.setOption1(valor[1]);
+                objetos2.setOption2(valor[2]);
+                objetos2.setOption3(valor[3]);
+                objetos2.setOption4(valor[4]);
+                objetos2.setRespostaCerta(valor[5]);
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+                Log.w("ERRO", "Failed to read value.", databaseError.toException());
+            }
+        });
+
+        questionThree.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                valor[0] = dataSnapshot.child("001").getValue(String.class);
+                valor[1] = dataSnapshot.child("002").getValue(String.class);
+                valor[2] = dataSnapshot.child("003").getValue(String.class);
+                valor[3] = dataSnapshot.child("004").getValue(String.class);
+                valor[4] = dataSnapshot.child("005").getValue(String.class);
+                valor[5] = dataSnapshot.child("006").getValue(String.class);
+
+                objetos3.setPergunta(valor[0]);
+                objetos3.setOption1(valor[1]);
+                objetos3.setOption2(valor[2]);
+                objetos3.setOption3(valor[3]);
+                objetos3.setOption4(valor[4]);
+                objetos3.setRespostaCerta(valor[5]);
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+                Log.w("ERRO", "Failed to read value.", databaseError.toException());
+            }
+        });
+
+        questionFour.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                valor[0] = dataSnapshot.child("001").getValue(String.class);
+                valor[1] = dataSnapshot.child("002").getValue(String.class);
+                valor[2] = dataSnapshot.child("003").getValue(String.class);
+                valor[3] = dataSnapshot.child("004").getValue(String.class);
+                valor[4] = dataSnapshot.child("005").getValue(String.class);
+                valor[5] = dataSnapshot.child("006").getValue(String.class);
+
+                objetos4.setPergunta(valor[0]);
+                objetos4.setOption1(valor[1]);
+                objetos4.setOption2(valor[2]);
+                objetos4.setOption3(valor[3]);
+                objetos4.setOption4(valor[4]);
+                objetos4.setRespostaCerta(valor[5]);
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+                Log.w("ERRO", "Failed to read value.", databaseError.toException());
+            }
+        });
+
+        questionFive.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                valor[0] = dataSnapshot.child("001").getValue(String.class);
+                valor[1] = dataSnapshot.child("002").getValue(String.class);
+                valor[2] = dataSnapshot.child("003").getValue(String.class);
+                valor[3] = dataSnapshot.child("004").getValue(String.class);
+                valor[4] = dataSnapshot.child("005").getValue(String.class);
+                valor[5] = dataSnapshot.child("006").getValue(String.class);
+
+                objetos5.setPergunta(valor[0]);
+                objetos5.setOption1(valor[1]);
+                objetos5.setOption2(valor[2]);
+                objetos5.setOption3(valor[3]);
+                objetos5.setOption4(valor[4]);
+                objetos5.setRespostaCerta(valor[5]);
+
             }
 
             @Override

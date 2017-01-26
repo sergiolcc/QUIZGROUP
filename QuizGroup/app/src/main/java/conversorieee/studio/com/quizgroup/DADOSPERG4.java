@@ -1,10 +1,10 @@
 package conversorieee.studio.com.quizgroup;
 
 /**
- * Created by Sergio on 22/01/2017.
+ * Created by Sergio on 26/01/2017.
  */
 
-public class DADOSPERG1 {
+public class DADOSPERG4 {
 
     private String pergunta;
     private String option1;
@@ -14,7 +14,7 @@ public class DADOSPERG1 {
     private String respostaCerta;
 
 
-    public DADOSPERG1(){
+    public DADOSPERG4(){
 
     }
 
@@ -66,4 +66,3 @@ public class DADOSPERG1 {
         this.respostaCerta = respostaCerta;
     }
 }
-
